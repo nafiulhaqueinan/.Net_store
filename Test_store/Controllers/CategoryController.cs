@@ -26,8 +26,12 @@ namespace Test_store.Controllers
         [HttpPost]
         public IActionResult Create(Category c)
         {
+            _db.Categories.Add(c);
+            _db.SaveChangesAsync();
 
-            return View();
+            return RedirectToAction("Index");
+
+            //return View();
         }
     }
 }
