@@ -28,6 +28,7 @@ namespace Test_store.Controllers
         {
             _db.Categories.Add(c);
             _db.SaveChangesAsync();
+            TempData["success"] = "Category created successfully";
 
             return RedirectToAction("Index");
 
@@ -76,7 +77,7 @@ namespace Test_store.Controllers
             return View(categoryFromDb);
         }
         [HttpPost, ActionName("Delete")]
-        public IActionResult DeletePOST(int? id)
+        public IActionResult DeletePost(int? id)
         {
             var obj = _db.Categories.Find(id);
             if (obj == null)
@@ -85,6 +86,7 @@ namespace Test_store.Controllers
             }
             _db.Categories.Remove(obj);
             _db.SaveChanges();
+            TempData["success"] = "Category deleted successfully";
             return RedirectToAction("Index");
         }
     }

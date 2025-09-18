@@ -1,3 +1,23 @@
 ﻿@model Category
 <h2>Delete</h2>
-
+<div>
+    <form asp-action="Delete" method="post">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Display</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody class="h5">
+            <tr>
+                <td>@Model.Name</td>
+                <td>@Model.Description</td>
+                <td>
+                        <button type="submit" class="btn btn-danger"><i class="bi bi-trash3-fill "></i>Delete</button>
+                </td>
+            </tr>
+        </tbody>
+        </form>
+</div>
