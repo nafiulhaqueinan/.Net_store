@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36429.23 d17.14
+VisualStudioVersion = 17.14.36429.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_store", "Test_store\Test_store.csproj", "{515503C8-F3CC-4CC1-9BD7-CCEEFA298A69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_store_RazorPages", "Test_store_RazorPages\Test_store_RazorPages.csproj", "{9E56F2D4-4386-4DF8-A234-1FAD12A8073D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{515503C8-F3CC-4CC1-9BD7-CCEEFA298A69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{515503C8-F3CC-4CC1-9BD7-CCEEFA298A69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{515503C8-F3CC-4CC1-9BD7-CCEEFA298A69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E56F2D4-4386-4DF8-A234-1FAD12A8073D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E56F2D4-4386-4DF8-A234-1FAD12A8073D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E56F2D4-4386-4DF8-A234-1FAD12A8073D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E56F2D4-4386-4DF8-A234-1FAD12A8073D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
