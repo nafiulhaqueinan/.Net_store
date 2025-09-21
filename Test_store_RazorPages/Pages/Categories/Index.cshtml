@@ -1,0 +1,51 @@
+﻿@page
+@model Test_store_RazorPages.Pages.Categories.IndexModel
+<h2>Category List</h2>
+
+<div class="container">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Category List </h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-page="Categories/Create" class="btn btn-primary ">
+                <i class="bi bi-plus-square"></i>Create New Category
+            </a>
+        </div>
+    </div>
+
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Display</th>
+                <th>Options</th>
+            </tr>
+        </thead>
+        <tbody class="h5">
+
+            @{
+                foreach (var item in Model.CategoryList.OrderBy(u => u.Id))
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Description</td>
+                        <td>
+                            <div class="w-75 btn-group" role="group">
+                                <a asp-page="Category/Edit" asp-route-Id="@item.Id" class="btn btn-primary mx-2">
+                                    <i class="bi bi-pencil-square"></i>
+                                </a>
+                                <a asp-page="Category/Delete" asp-route-Id="@item.Id" class="btn btn-danger mx-2">
+                                    <i class="bi bi-trash3-fill "></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+
+
+        </tbody>
+    </table>
+</div>

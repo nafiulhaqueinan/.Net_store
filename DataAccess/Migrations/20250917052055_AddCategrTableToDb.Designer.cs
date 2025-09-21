@@ -2,17 +2,20 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Test_store.Data;
+using DataAccess.Data;
 
 #nullable disable
 
-namespace Test_store.Migrations
+namespace DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250917052055_AddCategrTableToDb")]
+    partial class AddCategrTableToDb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -40,38 +43,6 @@ namespace Test_store.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Description = "Action movies",
-                            Name = "Action"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Description = "Comedy movies",
-                            Name = "Comedy"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Description = "Drama movies",
-                            Name = "Drama"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Description = "Horror movies",
-                            Name = "Horror"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Description = "Romance movies",
-                            Name = "Romance"
-                        });
                 });
 #pragma warning restore 612, 618
         }

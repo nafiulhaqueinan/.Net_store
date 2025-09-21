@@ -1,6 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Test_store.Models;
+using Model.Models;
 
 namespace Test_store.Controllers
 {

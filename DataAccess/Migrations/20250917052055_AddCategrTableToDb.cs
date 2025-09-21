@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Test_store.Migrations
+namespace DataAccess.Migrations
 {
     /// <inheritdoc />
     public partial class AddCategrTableToDb : Migration

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Test_store.Data;
-using Test_store.Models;
+using Model.Models;
+using DataAccess.Data; // Ensure this using directive is present for ApplicationDbContext
 
 namespace Test_store.Controllers
 {
